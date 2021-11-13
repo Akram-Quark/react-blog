@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin dimension($width, $height) {
+  height: $height;
+  width: $width;
+}
+@mixin flexify($direction, $contents, $items) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $contents;
+  align-items: $items;
+}
+@mixin colorify($color, $background) {
+  color: $color or white;
+  background-color: $background or #001523;
+}
+body {
+  @include dimension(100%, 100%);
+  @include colorify(white, #001523);
+}
+#root {
+  @include dimension(100%, 100%);
+  .App {
+    @include dimension(100%, 100%);
+    .wrapper {
+      @include dimension(100%, 100%);
+      @include flexify(column, center, center);
+    }
+  }
+}
+
+nav {
+  @include flexify(row, space-around, center);
+  @include dimension(100%, 6%);
+  @include colorify(white, #0b88db);
+  li {
+    list-style: none;
+    font-family: "Inter", sans-serif;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      color: tomato;
+    }
+  }
+  span {
+    font-family: "Inter", sans-serif;
+    color: tomato;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+.welcom {
+  @include dimension(80%, 40%);
+  @include flexify(column, center, center);
+  @include colorify(white, #002137);
+  font-family: "Inter", sans-serif;
+  border-radius: 15px;
+  h1 {
+    margin-bottom: 1em;
+    span {
+      color: tomato;
+    }
+  }
+  h3 {
+    font-weight: 200;
+    text-align: center;
+  }
+  .btn {
+    margin-top: 1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    color: white;
+    text-decoration: none;
+    background-color: #2a454b;
+  }
+}
+.blog {
+  @include colorify(white, #2a454b);
+  @include dimension(40%, 20%);
+  margin-bottom: 6px;
+  border-radius: 5px;
+  @include flexify(column, center, center);
+  font-family: "Inter", sans-serif;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  h2 {
+    margin-bottom: 20px;
+    &:before {
+      content: "";
+      position: absolute;
+      @include dimension(10px, 100%);
+      background-color: #0b88db;
+      top: 0;
+      left: 0;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    transform: translateX(8px);
+  }
+  p {
+    font-weight: 200;
+    margin-bottom: 10px;
+  }
+  .delete {
+    background-color: tomato;
+    padding: 2px 6px;
+    border-radius: 3px;
+    transition: all 0.5 ease;
+    &:hover {
+      background-color: #0b88db;
+    }
+  }
+}
+.not {
+  font-family: "Inter", sans-serif;
+  border-bottom: #0b88db solid 4px;
+  padding-bottom: 10px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+#addblog {
+  @include flexify(column, center, center);
+  @include dimension(100%, 100%);
+  form {
+    @include dimension(100%, 80%);
+    @include flexify(column, flex-start, center);
+    label {
+      margin-bottom: 5px;
+      font-family: "Inter", sans-serif;
+    }
+    input {
+      @include dimension(40%, 8%);
+      margin-bottom: 20px;
+      background-color: #002137;
+      border: none;
+      outline: none;
+      color: white;
+      font-family: "Inter", sans-serif;
+      border-radius: 15px;
+      &:focus {
+        padding-left: 10px;
+      }
+      padding-left: 10px;
+    }
+    button {
+      margin-top: 1em;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      transition: all 0.5s ease;
+      &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+
+      color: white;
+      text-decoration: none;
+      background-color: #2a454b;
+    }
+  }
+}

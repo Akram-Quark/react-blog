@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: #001523;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+#root .App {
+  height: 100%;
+  width: 100%;
+}
+
+#root .App .wrapper {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6%;
+  width: 100%;
+  color: white;
+  background-color: #0b88db;
+}
+
+nav li {
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav li:hover {
+  cursor: pointer;
+  color: tomato;
+}
+
+nav span {
+  font-family: "Inter", sans-serif;
+  color: tomato;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.welcom {
+  height: 40%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-color: #002137;
+  font-family: "Inter", sans-serif;
+  border-radius: 15px;
+}
+
+.welcom h1 {
+  margin-bottom: 1em;
+}
+
+.welcom h1 span {
+  color: tomato;
+}
+
+.welcom h3 {
+  font-weight: 200;
+  text-align: center;
+}
+
+.welcom .btn {
+  margin-top: 1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: white;
+  text-decoration: none;
+  background-color: #2a454b;
+}
+
+.welcom .btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.blog {
+  color: white;
+  background-color: #2a454b;
+  height: 20%;
+  width: 40%;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.blog h2 {
+  margin-bottom: 20px;
+}
+
+.blog h2:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  background-color: #0b88db;
+  top: 0;
+  left: 0;
+}
+
+.blog:hover {
+  cursor: pointer;
+  -webkit-transform: translateX(8px);
+          transform: translateX(8px);
+}
+
+.blog p {
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+.blog .delete {
+  background-color: tomato;
+  padding: 2px 6px;
+  border-radius: 3px;
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease;
+}
+
+.blog .delete:hover {
+  background-color: #0b88db;
+}
+
+.not {
+  font-family: "Inter", sans-serif;
+  border-bottom: #0b88db solid 4px;
+  padding-bottom: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+#addblog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#addblog form {
+  height: 80%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#addblog form label {
+  margin-bottom: 5px;
+  font-family: "Inter", sans-serif;
+}
+
+#addblog form input {
+  height: 8%;
+  width: 40%;
+  margin-bottom: 20px;
+  background-color: #002137;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: "Inter", sans-serif;
+  border-radius: 15px;
+  padding-left: 10px;
+}
+
+#addblog form input:focus {
+  padding-left: 10px;
+}
+
+#addblog form button {
+  margin-top: 1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: white;
+  text-decoration: none;
+  background-color: #2a454b;
+}
+
+#addblog form button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
